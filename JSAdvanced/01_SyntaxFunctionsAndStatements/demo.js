@@ -1,3 +1,5 @@
+// 
+
 let firstName = 'Ivan'
 console.log(firstName);
 
@@ -22,3 +24,13 @@ console.log(constNumber);
 
 console.log(5+10+firstName); // -> 15Ivan
 console.log(firstName+5+10); // -> Ivan510
+
+// functions
+
+// function printStars(count) {
+
+//     console.log("*".repeat(count));
+// }
+
+// let nmb = 10;
+// printStars(nmb);
