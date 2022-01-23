@@ -1,0 +1,12 @@
+{
+    "name": "Shumen",
+    "population": 100000,
+    "treasury": "1300 years of Bulgaria",
+    "someArray": [
+        "Test1",
+        "Test2",
+        "Test3",
+        "Test4",
+        "Test5"
+    ]
+}
