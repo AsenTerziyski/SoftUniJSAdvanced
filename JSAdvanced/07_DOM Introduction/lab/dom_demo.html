@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="testH1">Hello, DOM h1!</h1>
+    <h2>Hello, DOM h2!</h2>
+    <h3>Hello, DOM h3!</h3>
+    <h4>Hello, DOM h4!</h4>
+    <h5>Hello, DOM h5!</h5>
+    <h1 id="testH6">Hello, DOM h6!</h1>
+
+    <ul>
+        <li>element1</li>
+        <li>element2 </li>
+        <li>element3</li>
+        <!-- <li><a href="/">Click here!</a></li> -->
+    </ul>
+    </br>
+
+    <ul>
+        <li>element4</li>
+        <li>element5 </li>
+        <li id="el_six">element6</li>
+    </ul>
+
+    <button onclick="onButtonClickDoSmthng()">SEND1</button>
+    <button onclick="onButtonClickDoSmthng2()">SEND2</button>
+    <button onclick="changeH1Title()">CHANGE H1 TITLE</button>
+    <button onclick="changeInnerHtml()">CHANGE H1 inner html :) </button>
+    <button onclick="changeElement6()">CHANGE H6 :) </button>
+    <button onclick="replaceFunction()">CHANGE HELLO, DOM h6 :) </button>
+
+
+    <script>
+
+        function onButtonClickDoSmthng() {
+            let name = 'On click 1';
+            console.log(name);
+            console.log(5 + 5 + '!');
+        }
+
+        let testH1Element = document.getElementById('testH1');
+        console.log(testH1Element);
+        testH1Element.textContent = 'Modifyed with JS :)';
+
+        function changeInnerHtml() {
+            // с иннерХтмл - > ще го парсне. Няма да го парсне със текст контент!
+            testH1Element.innerHTML = 'Modifyed with <em>JS</em> :)'
+        }
+
+        function changeElement6() {
+            let element6 = document.getElementById('el_six');
+            element6.textContent = 'ELEMENT ===== >>>>>> 600!'
+        }
+
+    </script>
+
+    <script src="demo_js.js"></script>
+
+    <script>
+        let elementTest = document.getElementById('testH6');
+        let match = 'DOM';
+        let replacer = 'XXX'
+        function replaceFunction(element, matcher, replacer) {
+            while (element.textContent.includes(match)) {
+                element.textContent = element.textContent.replace(match, replacer)
+            }
+        }
+
+        replaceFunction(elementTest, match, replacer);
+
+        // function replaceFunction() {
+        //     let elementTest = document.getElementById('testH6');
+        //     let match = 'DOM';
+        //     let replacer = 'XXX'
+        //     while (element.textContent.includes(match)) {
+        //         elementTest = element.textContent.replace(match, replacer)
+        //     }
+            
+        //     return elementTest;
+        // }
+    </script>
+
+</body>
+
+</html>
