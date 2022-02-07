@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulations</title>
+</head>
+<body>
+    <h1>Movie List</h1>
+    <ul id="movie-list">
+        <li>The Matrix</li>
+    </ul>
+
+    <script>
+        let ulMovieList = document.getElementById('movie-list');
+        let newMovie1 = document.createElement('li');
+        newMovie1.textContent = 'Man of steel 100';
+        let newMovie2 = document.createElement('li');
+        newMovie2.textContent = 'Man of steel2';
+        ulMovieList.appendChild(newMovie1);
+        ulMovieList.appendChild(newMovie2);
+        let copyElement = newMovie1.cloneNode(true);
+        copyElement.textContent += 1500;
+        ulMovieList.appendChild(copyElement);
+
+        let newMovie0 = document.createElement('li');
+        newMovie0.textContent = 'Prepend movie';
+        ulMovieList.prepend(newMovie0);
+    </script>
+</body>
+</html>

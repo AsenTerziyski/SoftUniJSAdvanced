@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventsDemoPage</title>
+</head>
+
+<body>
+    <h1>DOM EVENTS | MOVIE LIST </h1>
+    <ul id="movie-list">
+        <li>The Matrix :) </li>
+    </ul>
+
+    <input type="text" name="title" />
+    <button onclick="addMovieOnClick(event)">ADD</button>
+
+    <script>
+        let count = 0;
+        function addMovieOnClick(event) {
+            // debugger;
+            let movieInputElement = document.querySelector('input[name="title"]');
+            let movieListElement = document.getElementById('movie-list');
+            let movieLiElement = document.createElement('li');
+
+
+            count++;
+            movieLiElement.textContent = count + ". " + movieInputElement.value;
+            movieListElement.appendChild(movieLiElement);
+            console.log('test');
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
