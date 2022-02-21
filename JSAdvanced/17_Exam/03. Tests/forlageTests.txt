@@ -1,0 +1,27 @@
+1. solution file:
+//ако е обект
+module.exports = library;
+
+// ако е клас
+module.exports = { Repository };
+
+2. test file:
+
+//ако е обект
+let library = require(`./library`);
+const { assert, expect } = require('chai');
+//let {expect} = require('chai')
+
+//ako e klas
+let { Repository } = require("./solution.js");
+
+
+3. дескрайбите:
+describe("Tests …", function() {
+    describe("TODO …", function() {
+        it("TODO …", function() {
+            // TODO: …
+        });
+     });
+     // TODO: …
+});
